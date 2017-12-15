@@ -1,0 +1,23 @@
+{
+  "name": "events-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enbani/Events.git"
+  },
+  "author": "Enbani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enbani/Events/issues"
+  },
+  "homepage": "https://github.com/Enbani/Events#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "yargs": "^10.0.3"
+  }
+}
