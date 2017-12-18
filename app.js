@@ -46,10 +46,23 @@ axios.get(geocodeUrl).then((response) => {
 	for (i in events) {
 		var eventData = {
 			title: events[i].name.text,
-			description: events[i].description.text
+			description: events[i].description.text,
+			event_start_time: events[i].start.local,
+			event_end_time: events[i].end.local,
+			is_free: events[i].is_free,
+			ebrite_id: events[i].id,
+			url: events[i].url,
+			venue_id: events[i].venue_id,
+			created: events[i].created,
+			changed: events[i].changed,
+			category_id: events[i].category_id,
+			subcategory_id: events[i].category_id,
+			is_gathr: false,
+			user_ids: [],
+			logo: events[i].logo.original.url
 		};
 
-		var eventString = JSON.stringify(eventData, undefined, 2);
+		var eventString = JSON.stringify(eventData, undefined, 4);
 
 		console.log(eventString);
 	};

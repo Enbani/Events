@@ -14,10 +14,19 @@ var geocodeAddress = (address) => {
 
 		console.log(response.data.results[0].formatted_address);
 
-		return lat, lng; 
-	}).catch((err) => {
+		return {latitude: lat, longitude:lng};
+	})
+	.catch((err) => {
 		// return and clean up error handling at some point
 		console.log('The site could not be reached', err);
 	})
 
+}
+
+geocodeAddress('10010').then((res) => {
+	console.log(res);
+});
+
+module.exports = {
+	geocodeAddress
 }
